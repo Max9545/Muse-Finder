@@ -1,11 +1,15 @@
 import {useEffect, useState} from 'react'
 
-function Card({ name }) {
+function Card({ name, country }) {
 
   return(
     <>
-    <p>{name}</p>
+    <p>fasldkjadslfjdsal;k</p>
+    <p>{name}</p> 
+    <p>{country}</p>
     </>
   )
 
 }
+
+export default Card
