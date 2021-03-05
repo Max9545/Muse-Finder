@@ -2,30 +2,33 @@
 import './App.css';
 import { useEffect, useState } from 'react';
 import CardDisplay from './CardDisplay/CardDisplay.js'
-const { getCode, getName } = require('country-list')
+// const { getCode, getName } = require('country-list')
+// { CountryDropdown, RegionDropdown, CountryRegionData } = require('react-country-region-selector') 
+
 
 
 function App() {
 
-    const [artists, setArtists] = useState('')
+    const [artists, setArtists] = useState()
 
     useEffect(() => {
+      // console.log(getName('It'))
        fetchInfo()
       .then(data => data.json())
       .then(data => setArtists(data))
     },[])
 
-    const fetchInfo = async ()  => {
+    const fetchInfo = ()  => {
      
-      return await fetch('https://pure-hollows-05817.herokuapp.com/https://api.musixmatch.com/ws/1.1/chart.artists.get?page=3&page_size=3&country=it&apikey=0f9be22f858591d254989feff9a29844')
+      return  fetch('https://pure-hollows-05817.herokuapp.com/https://api.musixmatch.com/ws/1.1/chart.artists.get?page=3&page_size=3&country=it&apikey=0f9be22f858591d254989feff9a29844')
+
     }
 
   return (
-    
     <div className="App">
       <header className="App-header">
         <p>
-          <CardDisplay  artists={artists}/>
+          {artists && <CardDisplay  artists={artists}/>}
         </p>
       </header>
     </div>

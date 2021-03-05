@@ -1,13 +1,13 @@
 import {useEffect, useState} from 'react'
 
-function Card({ name, country }) {
-
+function Card({ artist }) {
+ console.log(artist)
   return(
-    <>
-    <p>fasldkjadslfjdsal;k</p>
-    <p>{name}</p> 
-    <p>{country}</p>
-    </>
+    <div id={artist.artist.artist}>
+      <p></p>
+      <p>{artist.artist.artist_name}</p> 
+      <p>{artist.artist.artist_country}</p>
+    </div>
   )
 
 }
