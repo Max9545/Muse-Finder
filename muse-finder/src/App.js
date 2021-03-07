@@ -17,11 +17,11 @@ function App() {
     const nationData = countryData
 
     var clickAction = function (event, countryName, isoCode, value, prefix, suffix) {
-
+      
       fetchTopArtists(isoCode)
       .then(data => setArtists(data))
       .then(() => setCurrentCountry(countryName))
-      console.log(currentCountry)
+      .then(() => console.log(currentCountry))
 
   };
   
@@ -29,20 +29,22 @@ function App() {
   return (
   
     <div className="App">
-      {/* <header className="App-header">
-      </header> */}
+      <header className="App-header">
+      </header>
        {/* <Header/> */}
        <WorldMap 
        color="#1AFF1A" 
+       backgroundColor='#BD9DDC'
        tooltipBgColor='#4B0092'
        tooltipTextColor='#1AFF1A'
+       strokeOpacity='3'
        title="Music Of The World" 
        size="responsive" 
        data={nationData}
        onClickFunction={clickAction} 
        />
         <p>
-          {artists && <CardDisplay  artists={artists}/>}
+          {artists && currentCountry && <CardDisplay  artists={artists}/>}
         </p>
     
     </div>

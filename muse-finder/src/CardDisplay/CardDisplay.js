@@ -9,13 +9,13 @@ function CardDisplay({ artists, country }) {
 
   return (  
     <>
-      <p>Top 5 Artists from {country}</p>
+      <h2>Top 5 Artists from {country}</h2>
       {/* <p>{artists.message.body.artist_list[0].artist.artist_name}</p> */}
-      <p>
+      <article>
         {artists.message.body.artist_list.map(artist => 
           <Card artist={artist}/>
         )}
-      </p>
+      </article>
     </>
   )
 }

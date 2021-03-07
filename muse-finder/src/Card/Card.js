@@ -1,13 +1,19 @@
 import {useEffect, useState} from 'react'
-// import './Card.scss'
+import './Card.css'
 import { fetchSingleArtist } from '../apiCalls'
 
 function Card({ artist }) {
- console.log(artist)
+//  console.log(artist)
+
+ const getArtist = (id) => {
+   console.log('id space',id)
+  //  fetchSingleArtist(id)
+  //  .then(data => console.log(data))
+ }
   return(
-    <div id={artist.artist.artist}>
-      <p>{artist.artist.artist_name}</p> 
-    </div>
+    <section id={artist.artist.artist}  onClick={() => getArtist(artist.artist.artist_id)} >
+      <p >{artist.artist.artist_name} </p> 
+    </section>
   )
 
 }

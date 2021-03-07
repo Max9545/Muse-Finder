@@ -875,4 +875,707 @@ const countryData = [
     "value": 174
   }
 ]
+
+// const countryData = [
+//   {
+//     "countryName": "Fiji",
+//     "country": "FJ"
+//   },
+//   {
+//     "countryName": "Tanzania",
+//     "country": "TZ"
+//   },
+//   {
+//     "countryName": "Western Sahara",
+//     "country": "EH"
+//   },
+//   {
+//     "countryName": "Canada",
+//     "country": "CA"
+//   },
+//   {
+//     "countryName": "United States",
+//     "country": "US"
+//   },
+//   {
+//     "countryName": "Kazakhstan",
+//     "country": "KZ"
+//   },
+//   {
+//     "countryName": "Uzbekistan",
+//     "country": "UZ"
+//   },
+//   {
+//     "countryName": "Papua New Guinea",
+//     "country": "PG"
+//   },
+//   {
+//     "countryName": "Indonesia",
+//     "country": "ID"
+//   },
+//   {
+//     "countryName": "Argentina",
+//     "country": "AR"
+//   },
+//   {
+//     "countryName": "Chile",
+//     "country": "CL"
+//   },
+//   {
+//     "countryName": "Democratic Republic of the Congo",
+//     "country": "CD"
+//   },
+//   {
+//     "countryName": "Somalia",
+//     "country": "SO"
+//   },
+//   {
+//     "countryName": "Kenya",
+//     "country": "KE"
+//   },
+//   {
+//     "countryName": "Sudan",
+//     "country": "SD"
+//   },
+//   {
+//     "countryName": "Chad",
+//     "country": "TD"
+//   },
+//   {
+//     "countryName": "Haiti",
+//     "country": "HT"
+//   },
+//   {
+//     "countryName": "Dominican Republic",
+//     "country": "DO"
+//   },
+//   {
+//     "countryName": "Russia",
+//     "country": "RU"
+//   },
+//   {
+//     "countryName": "Bahamas",
+//     "country": "BS"
+//   },
+//   {
+//     "countryName": "Falkland Islands",
+//     "country": "FK"
+//   },
+//   {
+//     "countryName": "Norway",
+//     "country": "NO"
+//   },
+//   {
+//     "countryName": "Greenland",
+//     "country": "GL"
+//   },
+//   {
+//     "countryName": "Timor-Leste",
+//     "country": "TL"
+//   },
+//   {
+//     "countryName": "South Africa",
+//     "country": "ZA"
+//   },
+//   {
+//     "countryName": "Lesotho",
+//     "country": "LS"
+//   },
+//   {
+//     "countryName": "Mexico",
+//     "country": "MX"
+//   },
+//   {
+//     "countryName": "Uruguay",
+//     "country": "UY"
+//   },
+//   {
+//     "countryName": "Brazil",
+//     "country": "BR"
+//   },
+//   {
+//     "countryName": "Bolivia",
+//     "country": "BO"
+//   },
+//   {
+//     "countryName": "Peru",
+//     "country": "PE"
+//   },
+//   {
+//     "countryName": "Colombia",
+//     "country": "CO"
+//   },
+//   {
+//     "countryName": "Panama",
+//     "country": "PA"
+//   },
+//   {
+//     "countryName": "Costa Rica",
+//     "country": "CR"
+//   },
+//   {
+//     "countryName": "Nicaragua",
+//     "country": "NI"
+//   },
+//   {
+//     "countryName": "Honduras",
+//     "country": "HN"
+//   },
+//   {
+//     "countryName": "El Salvador",
+//     "country": "SV"
+//   },
+//   {
+//     "countryName": "Guatemala",
+//     "country": "GT"
+//   },
+//   {
+//     "countryName": "Belize",
+//     "country": "BZ"
+//   },
+//   {
+//     "countryName": "Venezuela",
+//     "country": "VE"
+//   },
+//   {
+//     "countryName": "Guyana",
+//     "country": "GY"
+//   },
+//   {
+//     "countryName": "Suriname",
+//     "country": "SR"
+//   },
+//   {
+//     "countryName": "France",
+//     "country": "FR"
+//   },
+//   {
+//     "countryName": "Ecuador",
+//     "country": "EC"
+//   },
+//   {
+//     "countryName": "Puerto Rico",
+//     "country": "PR"
+//   },
+//   {
+//     "countryName": "Jamaica",
+//     "country": "JM"
+//   },
+//   {
+//     "countryName": "Cuba",
+//     "country": "CU"
+//   },
+//   {
+//     "countryName": "Zimbabwe",
+//     "country": "ZW"
+//   },
+//   {
+//     "countryName": "Botswana",
+//     "country": "BW"
+//   },
+//   {
+//     "countryName": "Namibia",
+//     "country": "NA"
+//   },
+//   {
+//     "countryName": "Senegal",
+//     "country": "SN"
+//   },
+//   {
+//     "countryName": "Mali",
+//     "country": "ML"
+//   },
+//   {
+//     "countryName": "Mauritania",
+//     "country": "MR"
+//   },
+//   {
+//     "countryName": "Benin",
+//     "country": "BJ"
+//   },
+//   {
+//     "countryName": "Niger",
+//     "country": "NE"
+//   },
+//   {
+//     "countryName": "Nigeria",
+//     "country": "NG"
+//   },
+//   {
+//     "countryName": "Cameroon",
+//     "country": "CM"
+//   },
+//   {
+//     "countryName": "Togo",
+//     "country": "TG"
+//   },
+//   {
+//     "countryName": "Ghana",
+//     "country": "GH"
+//   },
+//   {
+//     "countryName": "Côted'Ivoire",
+//     "country": "CI"
+//   },
+//   {
+//     "countryName": "Guinea",
+//     "country": "GN"
+//   },
+//   {
+//     "countryName": "Guinea-Bissau",
+//     "country": "GW"
+//   },
+//   {
+//     "countryName": "Liberia",
+//     "country": "LR"
+//   },
+//   {
+//     "countryName": "Sierra Leone",
+//     "country": "SL"
+//   },
+//   {
+//     "countryName": "Burkina Faso",
+//     "country": "BF"
+//   },
+//   {
+//     "countryName": "Central African Republic",
+//     "country": "CF"
+//   },
+//   {
+//     "countryName": "Republic of the Congo",
+//     "country": "CG"
+//   },
+//   {
+//     "countryName": "Gabon",
+//     "country": "GA"
+//   },
+//   {
+//     "countryName": "Equatorial Guinea",
+//     "country": "GQ"
+//   },
+//   {
+//     "countryName": "Zambia",
+//     "country": "ZM"
+//   },
+//   {
+//     "countryName": "Malawi",
+//     "country": "MW"
+//   },
+//   {
+//     "countryName": "Mozambique",
+//     "country": "MZ"
+//   },
+//   {
+//     "countryName": "Eswatini",
+//     "country": "SZ"
+//   },
+//   {
+//     "countryName": "Angola",
+//     "country": "AO"
+//   },
+//   {
+//     "countryName": "Burundi",
+//     "country": "BI"
+//   },
+//   {
+//     "countryName": "Israel",
+//     "country": "IL"
+//   },
+//   {
+//     "countryName": "Lebanon",
+//     "country": "LB"
+//   },
+//   {
+//     "countryName": "Madagascar",
+//     "country": "MG"
+//   },
+//   {
+//     "countryName": "Palestine",
+//     "country": "PS"
+//   },
+//   {
+//     "countryName": "The Gambia",
+//     "country": "GM"
+//   },
+//   {
+//     "countryName": "Tunisia",
+//     "country": "TN"
+//   },
+//   {
+//     "countryName": "Algeria",
+//     "country": "DZ"
+//   },
+//   {
+//     "countryName": "Jordan",
+//     "country": "JO"
+//   },
+//   {
+//     "countryName": "United Arab Emirates",
+//     "country": "AE"
+//   },
+//   {
+//     "countryName": "Qatar",
+//     "country": "QA"
+//   },
+//   {
+//     "countryName": "Kuwait",
+//     "country": "KW"
+//   },
+//   {
+//     "countryName": "Iraq",
+//     "country": "IQ"
+//   },
+//   {
+//     "countryName": "Oman",
+//     "country": "OM"
+//   },
+//   {
+//     "countryName": "Vanuatu",
+//     "country": "VU"
+//   },
+//   {
+//     "countryName": "Cambodia",
+//     "country": "KH"
+//   },
+//   {
+//     "countryName": "Thailand",
+//     "country": "TH"
+//   },
+//   {
+//     "countryName": "Lao PDR",
+//     "country": "LA"
+//   },
+//   {
+//     "countryName": "Myanmar",
+//     "country": "MM"
+//   },
+//   {
+//     "countryName": "Vietnam",
+//     "country": "VN"
+//   },
+//   {
+//     "countryName": "Dem. Rep. Korea",
+//     "country": "KP"
+//   },
+//   {
+//     "countryName": "Republic of Korea",
+//     "country": "KR"
+//   },
+//   {
+//     "countryName": "Mongolia",
+//     "country": "MN"
+//   },
+//   {
+//     "countryName": "India",
+//     "country": "IN"
+//   },
+//   {
+//     "countryName": "Bangladesh",
+//     "country": "BD"
+//   },
+//   {
+//     "countryName": "Bhutan",
+//     "country": "BT"
+//   },
+//   {
+//     "countryName": "Nepal",
+//     "country": "NP"
+//   },
+//   {
+//     "countryName": "Pakistan",
+//     "country": "PK"
+//   },
+//   {
+//     "countryName": "Afghanistan",
+//     "country": "AF"
+//   },
+//   {
+//     "countryName": "Tajikistan",
+//     "country": "TJ"
+//   },
+//   {
+//     "countryName": "Kyrgyzstan",
+//     "country": "KG"
+//   },
+//   {
+//     "countryName": "Turkmenistan",
+//     "country": "TM"
+//   },
+//   {
+//     "countryName": "Iran",
+//     "country": "IR"
+//   },
+//   {
+//     "countryName": "Syria",
+//     "country": "SY"
+//   },
+//   {
+//     "countryName": "Armenia",
+//     "country": "AM"
+//   },
+//   {
+//     "countryName": "Sweden",
+//     "country": "SE"
+//   },
+//   {
+//     "countryName": "Belarus",
+//     "country": "BY"
+//   },
+//   {
+//     "countryName": "Ukraine",
+//     "country": "UA"
+//   },
+//   {
+//     "countryName": "Poland",
+//     "country": "PL"
+//   },
+//   {
+//     "countryName": "Austria",
+//     "country": "AT"
+//   },
+//   {
+//     "countryName": "Hungary",
+//     "country": "HU"
+//   },
+//   {
+//     "countryName": "Moldova",
+//     "country": "MD"
+//   },
+//   {
+//     "countryName": "Romania",
+//     "country": "RO"
+//   },
+//   {
+//     "countryName": "Lithuania",
+//     "country": "LT"
+//   },
+//   {
+//     "countryName": "Latvia",
+//     "country": "LV"
+//   },
+//   {
+//     "countryName": "Estonia",
+//     "country": "EE"
+//   },
+//   {
+//     "countryName": "Germany",
+//     "country": "DE"
+//   },
+//   {
+//     "countryName": "Bulgaria",
+//     "country": "BG"
+//   },
+//   {
+//     "countryName": "Greece",
+//     "country": "GR"
+//   },
+//   {
+//     "countryName": "Turkey",
+//     "country": "TR"
+//   },
+//   {
+//     "countryName": "Albania",
+//     "country": "AL"
+//   },
+//   {
+//     "countryName": "Croatia",
+//     "country": "HR"
+//   },
+//   {
+//     "countryName": "Switzerland",
+//     "country": "CH"
+//   },
+//   {
+//     "countryName": "Luxembourg",
+//     "country": "LU"
+//   },
+//   {
+//     "countryName": "Belgium",
+//     "country": "BE"
+//   },
+//   {
+//     "countryName": "Netherlands",
+//     "country": "NL"
+//   },
+//   {
+//     "countryName": "Portugal",
+//     "country": "PT"
+//   },
+//   {
+//     "countryName": "Spain",
+//     "country": "ES"
+//   },
+//   {
+//     "countryName": "Ireland",
+//     "country": "IE"
+//   },
+//   {
+//     "countryName": "New Caledonia",
+//     "country": "NC"
+//   },
+//   {
+//     "countryName": "Solomon Islands",
+//     "country": "SB"
+//   },
+//   {
+//     "countryName": "New Zealand",
+//     "country": "NZ"
+//   },
+//   {
+//     "countryName": "Australia",
+//     "country": "AU"
+//   },
+//   {
+//     "countryName": "Sri Lanka",
+//     "country": "LK"
+//   },
+//   {
+//     "countryName": "China",
+//     "country": "CN"
+//   },
+//   {
+//     "countryName": "Taiwan",
+//     "country": "TW"
+//   },
+//   {
+//     "countryName": "Italy",
+//     "country": "IT"
+//   },
+//   {
+//     "countryName": "Denmark",
+//     "country": "DK"
+//   },
+//   {
+//     "countryName": "United Kingdom",
+//     "country": "GB"
+//   },
+//   {
+//     "countryName": "Iceland",
+//     "country": "IS"
+//   },
+//   {
+//     "countryName": "Azerbaijan",
+//     "country": "AZ"
+//   },
+//   {
+//     "countryName": "Georgia",
+//     "country": "GE"
+//   },
+//   {
+//     "countryName": "Philippines",
+//     "country": "PH"
+//   },
+//   {
+//     "countryName": "Malaysia",
+//     "country": "MY"
+//   },
+//   {
+//     "countryName": "Brunei Darussalam",
+//     "country": "BN"
+//   },
+//   {
+//     "countryName": "Slovenia",
+//     "country": "SI"
+//   },
+//   {
+//     "countryName": "Finland",
+//     "country": "FI"
+//   },
+//   {
+//     "countryName": "Slovakia",
+//     "country": "SK"
+//   },
+//   {
+//     "countryName": "Czech Republic",
+//     "country": "CZ"
+//   },
+//   {
+//     "countryName": "Eritrea",
+//     "country": "ER"
+//   },
+//   {
+//     "countryName": "Japan",
+//     "country": "JP"
+//   },
+//   {
+//     "countryName": "Paraguay",
+//     "country": "PY"
+//   },
+//   {
+//     "countryName": "Yemen",
+//     "country": "YE"
+//   },
+//   {
+//     "countryName": "Saudi Arabia",
+//     "country": "SA"
+//   },
+//   {
+//     "countryName": "Northern Cyprus",
+//     "country": "CYP"
+//   },
+//   {
+//     "countryName": "Cyprus",
+//     "country": "CY"
+//   },
+//   {
+//     "countryName": "Morocco",
+//     "country": "MA"
+//   },
+//   {
+//     "countryName": "Egypt",
+//     "country": "EG"
+//   },
+//   {
+//     "countryName": "Libya",
+//     "country": "LY"
+//   },
+//   {
+//     "countryName": "Ethiopia",
+//     "country": "ET"
+//   },
+//   {
+//     "countryName": "Djibouti",
+//     "country": "DJ"
+//   },
+//   {
+//     "countryName": "Somaliland",
+//     "country": "SOM"
+//   },
+//   {
+//     "countryName": "Uganda",
+//     "country": "UG"
+//   },
+//   {
+//     "countryName": "Rwanda",
+//     "country": "RW"
+//   },
+//   {
+//     "countryName": "Bosnia and Herzegovina",
+//     "country": "BA"
+//   },
+//   {
+//     "countryName": "Macedonia",
+//     "country": "MK"
+//   },
+//   {
+//     "countryName": "Serbia",
+//     "country": "RS"
+//   },
+//   {
+//     "countryName": "Montenegro",
+//     "country": "ME"
+//   },
+//   {
+//     "countryName": "Kosovo",
+//     "country": "XK"
+//   },
+//   {
+//     "countryName": "Trinidad and Tobago",
+//     "country": "TT"
+//   },
+//   {
+//     "countryName": "South Sudan",
+//     "country": "SS"
+//   }
+// ]
 export default countryData
