@@ -1,6 +1,6 @@
 
 import './App.css';
-import { fetchArtists } from './apiCalls'
+import { fetchTopArtists } from './apiCalls'
 import { useEffect, useState } from 'react';
 import CardDisplay from './CardDisplay/CardDisplay.js'
 // const { getCode, getName } = require('country-list')
@@ -42,7 +42,7 @@ function App() {
     // }
     var clickAction = function (event, countryName, isoCode, value, prefix, suffix) {
       // fetchInfo(isoCode)
-      fetchArtists(isoCode)
+      fetchTopArtists(isoCode)
       .then(data => setArtists(data))
       .then(() => setCurrentCountry(countryName))
       console.log(currentCountry)

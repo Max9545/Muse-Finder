@@ -1,5 +1,6 @@
 import {useEffect, useState} from 'react'
 // import './Card.scss'
+import { fetchSingleArtist } from '../apiCalls'
 
 function Card({ artist }) {
  console.log(artist)
