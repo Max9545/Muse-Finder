@@ -17,6 +17,7 @@ function App() {
     const nationData = countryData
 
     var clickAction = function (event, countryName, isoCode, value, prefix, suffix) {
+
       fetchTopArtists(isoCode)
       .then(data => setArtists(data))
       .then(() => setCurrentCountry(countryName))
@@ -32,9 +33,11 @@ function App() {
       </header> */}
        {/* <Header/> */}
        <WorldMap 
-       color="green" 
-       title="World Map" 
-       size="lg" 
+       color="#1AFF1A" 
+       tooltipBgColor='#4B0092'
+       tooltipTextColor='#1AFF1A'
+       title="Music Of The World" 
+       size="responsive" 
        data={nationData}
        onClickFunction={clickAction} 
        />
