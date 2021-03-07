@@ -6,7 +6,6 @@ function Card({ artist }) {
     <div id={artist.artist.artist}>
       <p></p>
       <p>{artist.artist.artist_name}</p> 
-      <p>{artist.artist.artist_country}</p>
     </div>
   )
 

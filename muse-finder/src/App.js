@@ -15,20 +15,22 @@ const WorldMap = require('react-svg-worldmap').WorldMap;
 function App() {
 
     const [artists, setArtists] = useState()
-    // const [nationData, setCountries] = useState()
+    const [currentCountry, setCurrentCountry] = useState()
     const nationData = countryData
 
-    useEffect(() => {
-      // console.log(getName('It'))
-       fetchInfo()
+    // useEffect(() => {
+    //   // console.log(getName('It'))
+    //    fetchInfo()
+    //   .then(data => data.json())
+    //   .then(data => setArtists(data))
+    //   .then(() => console.log(nationData))
+    // },[])
+
+    const fetchInfo = (country)  => {
+     
+      return fetch(`https://pure-hollows-05817.herokuapp.com/https://api.musixmatch.com/ws/1.1/chart.artists.get?page=3&page_size=5&country=${country}&apikey=0f9be22f858591d254989feff9a29844`)
       .then(data => data.json())
       .then(data => setArtists(data))
-      .then(() => console.log(nationData))
-    },[])
-
-    const fetchInfo = ()  => {
-     
-      return  fetch('https://pure-hollows-05817.herokuapp.com/https://api.musixmatch.com/ws/1.1/chart.artists.get?page=3&page_size=3&country=it&apikey=0f9be22f858591d254989feff9a29844')
 
     }
     // const getCountryCode = (event) => {
@@ -37,7 +39,10 @@ function App() {
     //   console.log(event.target.countryName)
     // }
     var clickAction = function (event, countryName, isoCode, value, prefix, suffix) {
-      console.log(isoCode)
+      fetchInfo(isoCode)
+      .then(() => setCurrentCountry(countryName))
+      console.log(currentCountry)
+
   };
   
       
