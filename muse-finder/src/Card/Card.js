@@ -7,8 +7,8 @@ function Card({ artist }) {
 
  const getArtist = (id) => {
    console.log('id space',id)
-  //  fetchSingleArtist(id)
-  //  .then(data => console.log(data))
+   fetchSingleArtist(id)
+   .then(data => console.log(data))
  }
   return(
     <section id={artist.artist.artist}  onClick={() => getArtist(artist.artist.artist_id)} >

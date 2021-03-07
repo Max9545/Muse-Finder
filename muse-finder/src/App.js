@@ -1,5 +1,6 @@
 
 import './App.css';
+import Header from './Header/Header.js'
 import { fetchTopArtists } from './apiCalls'
 import { useEffect, useState } from 'react';
 import CardDisplay from './CardDisplay/CardDisplay.js'
@@ -8,7 +9,7 @@ import CardDisplay from './CardDisplay/CardDisplay.js'
 // import { WorldMap } from "react-svg-worldmap"
 import countryData from './countryData';
 const WorldMap = require('react-svg-worldmap').WorldMap;
-// import Header from './Header/Header.scss'
+
 
 function App() {
 
@@ -29,9 +30,9 @@ function App() {
   return (
   
     <div className="App">
-      <header className="App-header">
-      </header>
-       {/* <Header/> */}
+      {/* <header className="App-header">
+      </header> */}
+       <Header/>
        <WorldMap 
        color="#1AFF1A" 
        backgroundColor='#BD9DDC'
