@@ -9,10 +9,6 @@ import CardDisplay from './CardDisplay/CardDisplay.js'
 import countryData from './countryData';
 const WorldMap = require('react-svg-worldmap').WorldMap;
 // import Header from './Header/Header.scss'
-// import countryData from './countryData';
-// import countryData from './countryData.js'
-
-
 
 function App() {
 
@@ -20,28 +16,7 @@ function App() {
     const [currentCountry, setCurrentCountry] = useState()
     const nationData = countryData
 
-    // useEffect(() => {
-    //   // console.log(getName('It'))
-    //    fetchInfo()
-    //   .then(data => data.json())
-    //   .then(data => setArtists(data))
-    //   .then(() => console.log(nationData))
-    // },[])
-
-    // const fetchInfo = (country)  => {
-     
-    //   return fetch(`https://pure-hollows-05817.herokuapp.com/https://api.musixmatch.com/ws/1.1/chart.artists.get?page=3&page_size=5&country=${country}&apikey=0f9be22f858591d254989feff9a29844`)
-    //   .then(data => data.json())
-    //   .then(data => setArtists(data))
-
-    // }
-    // const getCountryCode = (event) => {
-    //   // console.log(event)
-    
-    //   console.log(event.target.countryName)
-    // }
     var clickAction = function (event, countryName, isoCode, value, prefix, suffix) {
-      // fetchInfo(isoCode)
       fetchTopArtists(isoCode)
       .then(data => setArtists(data))
       .then(() => setCurrentCountry(countryName))
