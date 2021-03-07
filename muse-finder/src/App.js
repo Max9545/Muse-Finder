@@ -31,12 +31,27 @@ function App() {
       return  fetch('https://pure-hollows-05817.herokuapp.com/https://api.musixmatch.com/ws/1.1/chart.artists.get?page=3&page_size=3&country=it&apikey=0f9be22f858591d254989feff9a29844')
 
     }
-
+    // const getCountryCode = (event) => {
+    //   // console.log(event)
+    
+    //   console.log(event.target.countryName)
+    // }
+    var clickAction = function (event, countryName, isoCode, value, prefix, suffix) {
+      console.log(isoCode)
+  };
+  
+      
   return (
   
     <div className="App">
       <header className="App-header">
-       <WorldMap color="green" title="World Map" size="lg" data={nationData} />
+       <WorldMap 
+       color="green" 
+       title="World Map" 
+       size="lg" 
+       data={nationData}
+       onClickFunction={clickAction} 
+       />
         <p>
           {artists && <CardDisplay  artists={artists}/>}
         </p>
