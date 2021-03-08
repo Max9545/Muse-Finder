@@ -1,7 +1,5 @@
 # Muse-Finder
 
-# Muse Finder
-
 Muse Finder is for people traveling to another country who want to learn about the local music or have friends or family they want to bond with through one of the universal languages. 
 
 
