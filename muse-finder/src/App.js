@@ -1,36 +1,79 @@
-
 import './App.css';
-import { useEffect, useState } from 'react';
+import Header from './Header/Header.js'
+import countryData from './countryData';
+import { fetchTopArtists } from './apiCalls'
+import { useEffect, useState, useRef } from 'react';
 import CardDisplay from './CardDisplay/CardDisplay.js'
-// const { getCode, getName } = require('country-list')
-// { CountryDropdown, RegionDropdown, CountryRegionData } = require('react-country-region-selector') 
-
-
+import ArtistDisplay from './ArtistDisplay/ArtistDisplay';
+const { getCode, getName } = require('country-list')
+const WorldMap = require('react-svg-worldmap').WorldMap;
+const { CountryDropdown, RegionDropdown, CountryRegionData } = require('react-country-region-selector') 
 
 function App() {
 
-    const [artists, setArtists] = useState()
+    const [artists, setTopArtists] = useState()
+    const [currentCountry, setCurrentCountry] = useState()
+    const [currentArtistID, setCurrentArtistID] = useState()
+    const nationData = countryData
+    // const inputRef = useRef()
 
-    useEffect(() => {
-      // console.log(getName('It'))
-       fetchInfo()
-      .then(data => data.json())
-      .then(data => setArtists(data))
-    },[])
+    // useEffect(() => {
+    //   inputRef.current.focus()
+    // },[])
 
-    const fetchInfo = ()  => {
-     
-      return  fetch('https://pure-hollows-05817.herokuapp.com/https://api.musixmatch.com/ws/1.1/chart.artists.get?page=3&page_size=3&country=it&apikey=0f9be22f858591d254989feff9a29844')
+    const mapCountrySet = (event, countryName, isoCode, value, prefix, suffix) => {
+      setCurrentCountry(countryName)
+      fetchTopArtists(isoCode)
+      .then(data => setTopArtists(data))
+      .then(() => setCurrentArtistID())
+  };
 
+    const dropDownCountrySet = (countryName) => {
+      setCurrentCountry(countryName)
+      fetchTopArtists(getCode(countryName))
+      .then(data => setTopArtists(data))
+      .then(() => setCurrentArtistID())
     }
-
+  
+      
   return (
+  
     <div className="App">
-      <header className="App-header">
-        <p>
-          {artists && <CardDisplay  artists={artists}/>}
-        </p>
-      </header>
+       <Header/>
+       <p className='help-tag'>Select a country by typing or by using the drop down list or click on the map</p>
+       <CountryDropdown
+        type='drop-down'
+        className='drop-down'
+        value={currentCountry}
+        onChange={(val) => dropDownCountrySet(val)}
+        // ref={inputRef}
+       />
+       <br/>
+       <WorldMap 
+        color="#1AFF1A" 
+        backgroundColor='#BD9DDC'
+        tooltipBgColor='#4B0092'
+        tooltipTextColor='#1AFF1A'
+        strokeOpacity='3'
+        // title="Music Of The World" 
+        size="responsive" 
+        data={nationData}
+        onClickFunction={mapCountrySet} 
+       />
+      <p>
+        {artists && currentCountry && !currentArtistID && 
+        <CardDisplay  
+        country={currentCountry} 
+        artists={artists}
+        setTopArtists={setTopArtists}
+        setCurrentArtistID={setCurrentArtistID}
+        setCurrentCountry={setCurrentCountry}
+        />}
+        { !artists  && currentArtistID && !currentCountry &&
+        <ArtistDisplay 
+         artistID={currentArtistID}
+        />}
+      </p>
     </div>
   );
 }

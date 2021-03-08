@@ -1,19 +1,25 @@
 import {useEffect, useState} from 'react'
 import Card from '../Card/Card.js'
+import './CardDisplay.css'
 
-function CardDisplay({ artists }) {
+
+function CardDisplay({ artists, country, setTopArtists, setCurrentArtistID, setCurrentCountry }) {
 
   
 
   return (  
     <>
-      <p>Artists</p>
-      {/* <p>{artists.message.body.artist_list[0].artist.artist_name}</p> */}
-      <p>
+      <h2>Top 5 Artists from {country}</h2>
+      <article>
         {artists.message.body.artist_list.map(artist => 
-          <Card artist={artist}/>
+          <Card 
+            artist={artist}
+            setTopArtists={setTopArtists}
+            setCurrentArtistID={setCurrentArtistID}
+            setCurrentCountry={setCurrentCountry}
+          />
         )}
-      </p>
+      </article>
     </>
   )
 }
