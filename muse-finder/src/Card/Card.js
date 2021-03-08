@@ -5,13 +5,7 @@ import { fetchSingleArtist, fetchSingleArtistAlbums } from '../apiCalls'
 function Card({ artist, setCurrentArtistID, setTopArtists, setCurrentCountry }) {
 
  const getArtist = (id) => {
-  //  fetchSingleArtist(id)
-  //  .then(data => setCurrentArtist(data))
-  //  .then()
-  //  .then(data => console.log(data))
-   
-    setCurrentArtistID(id)
-  //  fetchSingleArtistAlbums(id)
+  setCurrentArtistID(id)
   setTopArtists()
   setCurrentCountry()
  }
