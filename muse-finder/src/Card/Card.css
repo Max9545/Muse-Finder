@@ -1,13 +1,14 @@
 p {
    padding: .5em;
   color: #1AFF1A;
-  font-size: 1.3em;
-  font-weight: 400;
+  font-size: 1.4em;
+  font-weight: 900;
+  font-style: bold;
   margin: 1em;
 }
 
 section {
-  border: 1px solid black;
+  /* border: 1px solid black; */
   background-color: #4B0092;
   height: 5vh;
   width: 40vw;
@@ -16,4 +17,12 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
+  border-width: 4vh;
+  border-style: solid;
+  border-radius: 12vh;
+  /* border-image:  */
+  /* linear-gradient(to top, #4B0092, #1AFF1A); */
+  
+
+  /* #a053df */
 }

@@ -3,7 +3,7 @@
 }
 html {
   height: 100%;
-  background-color: #1AFF1A;
+  background: radial-gradient(circle, rgba(26,255,26,1) 26%, rgba(0,212,255,1) 55%, rgba(10,184,241,1) 60%, rgba(75,0,146,1) 95%);
   /* display: flex; */
 }
 .drop-down {
@@ -12,7 +12,8 @@ html {
   height: 5vh;
   background-color:#4B0092 ;
   color: #1AFF1A;
-  font-size: 2em;
+  font-size: 3em;
+  font-weight: 700;
   padding-left: 2vw;
 }
 .help-tag {

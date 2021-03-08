@@ -39,6 +39,7 @@ function App() {
        <Header/>
        <p className='help-tag'>Select a country by typing in or by using the drop down list or click on the map</p>
        <CountryDropdown
+        type='drop-down'
         className='drop-down'
         value={currentCountry}
         onChange={(val) => dropDownCountrySet(val)}
