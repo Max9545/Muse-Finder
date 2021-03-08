@@ -1,16 +1,16 @@
 import { useEffect, useState } from 'react'
 import { fetchSingleArtist, fetchSingleArtistAlbums } from "../apiCalls"
 
-function ArtistDisplay ({artistID}) {
+function ArtistDisplay ({artistID, setFavoriteArtists, favoriteArtists}) {
   
   const [albums, setAlbums] = useState()
   const [artist, setArtist] = useState()
+
   useEffect(() => {
     fetchSingleArtist(artistID)
     .then(data => setArtist(data))
     .then(data => console.log(data))
   }, [])
-
 
 
   useEffect(() => {
@@ -24,7 +24,7 @@ function ArtistDisplay ({artistID}) {
      <>
       {albums && artist &&
       <h3>{`${artist.message.body.artist.artist_name}`} Albums: <br></br>{albums.map(album => album.album.album_name)}</h3>}
-      {/* <button onClick={() => saveArtist()}></button> */}
+      <button onClick={() => setFavoriteArtists(favoriteArtists => [...favoriteArtists, artist])}>Favorite this Artist</button>
      </>
     )
 

@@ -14,6 +14,7 @@ function App() {
     const [artists, setTopArtists] = useState()
     const [currentCountry, setCurrentCountry] = useState()
     const [currentArtistID, setCurrentArtistID] = useState()
+    const [favoriteArtists, setFavoriteArtists] = useState([])
     const nationData = countryData
     // const inputRef = useRef()
 
@@ -72,6 +73,8 @@ function App() {
         { !artists  && currentArtistID && !currentCountry &&
         <ArtistDisplay 
          artistID={currentArtistID}
+         setFavoriteArtists={setFavoriteArtists}
+         favoriteArtists={favoriteArtists}
         />}
       </p>
     </div>
