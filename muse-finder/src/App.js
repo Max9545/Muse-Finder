@@ -11,11 +11,12 @@ const { CountryDropdown, RegionDropdown, CountryRegionData } = require('react-co
 
 function App() {
 
-    const [artists, setTopArtists] = useState()
+    const [topArtists, setTopArtists] = useState()
     const [currentCountry, setCurrentCountry] = useState()
     const [currentArtistID, setCurrentArtistID] = useState()
     const [favoriteArtists, setFavoriteArtists] = useState([])
     const nationData = countryData
+
     // const inputRef = useRef()
 
     // useEffect(() => {
@@ -62,19 +63,19 @@ function App() {
         onClickFunction={mapCountrySet} 
        />
       <p>
-        {artists && currentCountry && !currentArtistID && 
+        {topArtists && currentCountry && !currentArtistID && 
         <CardDisplay  
-        country={currentCountry} 
-        artists={artists}
-        setTopArtists={setTopArtists}
-        setCurrentArtistID={setCurrentArtistID}
-        setCurrentCountry={setCurrentCountry}
+          country={currentCountry} 
+          topArtists={topArtists}
+          setTopArtists={setTopArtists}
+          setCurrentArtistID={setCurrentArtistID}
+          setCurrentCountry={setCurrentCountry}
         />}
-        { !artists  && currentArtistID && !currentCountry &&
+        { !topArtists  && !currentCountry && currentArtistID &&
         <ArtistDisplay 
-         artistID={currentArtistID}
-         setFavoriteArtists={setFavoriteArtists}
-         favoriteArtists={favoriteArtists}
+          artistID={currentArtistID}
+          setFavoriteArtists={setFavoriteArtists}
+          favoriteArtists={favoriteArtists}
         />}
       </p>
     </div>
