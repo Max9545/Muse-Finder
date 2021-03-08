@@ -4,14 +4,16 @@ import countryData from './countryData';
 import { fetchTopArtists } from './apiCalls'
 import { useEffect, useState, useRef } from 'react';
 import CardDisplay from './CardDisplay/CardDisplay.js'
+import ArtistDisplay from './ArtistDisplay/ArtistDisplay';
 const { getCode, getName } = require('country-list')
 const WorldMap = require('react-svg-worldmap').WorldMap;
 const { CountryDropdown, RegionDropdown, CountryRegionData } = require('react-country-region-selector') 
 
 function App() {
 
-    const [artists, setArtists] = useState()
+    const [artists, setTopArtists] = useState()
     const [currentCountry, setCurrentCountry] = useState()
+    const [currentArtistID, setCurrentArtist] = useState()
     const nationData = countryData
     // const inputRef = useRef()
 
@@ -22,13 +24,13 @@ function App() {
     const mapCountrySet = (event, countryName, isoCode, value, prefix, suffix) => {
       setCurrentCountry(countryName)
       fetchTopArtists(isoCode)
-      .then(data => setArtists(data))
+      .then(data => setTopArtists(data))
   };
 
     const dropDownCountrySet = (countryName) => {
       setCurrentCountry(countryName)
       fetchTopArtists(getCode(countryName))
-      .then(data => setArtists(data))
+      .then(data => setTopArtists(data))
     }
   
       
@@ -57,7 +59,17 @@ function App() {
         onClickFunction={mapCountrySet} 
        />
       <p>
-        {artists && currentCountry && <CardDisplay  country={currentCountry}artists={artists}/>}
+        {artists && currentCountry && !currentArtistID && 
+        <CardDisplay  
+        country={currentCountry} 
+        artists={artists}
+        setTopArtists={setTopArtists}
+        setCurrentArtist={setCurrentArtist}
+        />}
+        {currentArtistID && !artists && 
+        <ArtistDisplay 
+         artistID={currentArtistID}
+        />}
       </p>
     </div>
   );
