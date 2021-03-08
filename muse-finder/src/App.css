@@ -5,19 +5,18 @@
 html {
   height: 100%;
   background: radial-gradient(circle, rgba(26,255,26,1) 26%, rgba(0,212,255,1) 55%, rgba(10,184,241,1) 60%, rgba(75,0,146,1) 95%);
-  /* display: flex; */
 }
 .drop-down {
   margin-bottom: 5vh;
   width: 50vw;
-  height: 6vh;
+  height: 9vh;
   background-color:#4B0092 ;
   color: #1AFF1A;
-  font-size: 2.4em;
+  font-size: 2em;
   font-weight: 700;
-  padding: 0 0 1vh 1vw;
   font-family: "opendyslexic" !important;
-
+  border-radius: 30px;
+  padding-left: 2vw;
 }
 .help-tag {
   color: black;

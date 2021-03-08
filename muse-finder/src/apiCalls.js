@@ -18,5 +18,4 @@ export const fetchTopArtists = (country)  => {
 
 
 
-  //artist.albums.get?artist_id=${artistID}&s_release_date=desc&g_album_name=1
 

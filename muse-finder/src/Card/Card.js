@@ -6,8 +6,8 @@ function Card({ artist }) {
 
  const getArtist = (id) => {
    console.log('id space',id)
-  //  fetchSingleArtist(id)
-  //  .then(data => console.log(data))
+   fetchSingleArtist(id)
+   .then(data => console.log(data))
    fetchSingleArtistAlbums(id)
    .then(data => console.log(data))
  }

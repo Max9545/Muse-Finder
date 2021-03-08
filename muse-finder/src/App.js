@@ -1,23 +1,23 @@
-
 import './App.css';
-
 import Header from './Header/Header.js'
 import countryData from './countryData';
 import { fetchTopArtists } from './apiCalls'
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import CardDisplay from './CardDisplay/CardDisplay.js'
 const { getCode, getName } = require('country-list')
-// import { WorldMap } from "react-svg-worldmap"
-
 const WorldMap = require('react-svg-worldmap').WorldMap;
 const { CountryDropdown, RegionDropdown, CountryRegionData } = require('react-country-region-selector') 
-
 
 function App() {
 
     const [artists, setArtists] = useState()
     const [currentCountry, setCurrentCountry] = useState()
     const nationData = countryData
+    // const inputRef = useRef()
+
+    // useEffect(() => {
+    //   inputRef.current.focus()
+    // },[])
 
     const mapCountrySet = (event, countryName, isoCode, value, prefix, suffix) => {
       setCurrentCountry(countryName)
@@ -25,24 +25,24 @@ function App() {
       .then(data => setArtists(data))
   };
 
-  const dropDownCountrySet = (countryName) => {
-    console.log(getCode(countryName))
-    setCurrentCountry(countryName)
-    fetchTopArtists(getCode(countryName))
-    .then(data => setArtists(data))
-  }
+    const dropDownCountrySet = (countryName) => {
+      setCurrentCountry(countryName)
+      fetchTopArtists(getCode(countryName))
+      .then(data => setArtists(data))
+    }
   
       
   return (
   
     <div className="App">
        <Header/>
-       <p className='help-tag'>Select a country by typing in or by using the drop down list or click on the map</p>
+       <p className='help-tag'>Select a country by typing or by using the drop down list or click on the map</p>
        <CountryDropdown
         type='drop-down'
         className='drop-down'
         value={currentCountry}
         onChange={(val) => dropDownCountrySet(val)}
+        // ref={inputRef}
        />
        <br/>
        <WorldMap 
