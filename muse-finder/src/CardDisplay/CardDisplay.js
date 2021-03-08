@@ -1,6 +1,6 @@
 import {useEffect, useState} from 'react'
 import Card from '../Card/Card.js'
-// import './CardDisplay.scss'
+import './CardDisplay.css'
 
 
 function CardDisplay({ artists, country }) {
