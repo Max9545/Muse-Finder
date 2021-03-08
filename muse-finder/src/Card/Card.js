@@ -2,7 +2,7 @@ import {useEffect, useState} from 'react'
 import './Card.css'
 import { fetchSingleArtist, fetchSingleArtistAlbums } from '../apiCalls'
 
-function Card({ artist, setCurrentArtist, setTopArtists }) {
+function Card({ artist, setCurrentArtistID, setTopArtists, setCurrentCountry }) {
 
  const getArtist = (id) => {
   //  fetchSingleArtist(id)
@@ -10,9 +10,10 @@ function Card({ artist, setCurrentArtist, setTopArtists }) {
   //  .then()
   //  .then(data => console.log(data))
    
-    setCurrentArtist(id)
+    setCurrentArtistID(id)
   //  fetchSingleArtistAlbums(id)
   setTopArtists()
+  setCurrentCountry()
  }
 
   return(

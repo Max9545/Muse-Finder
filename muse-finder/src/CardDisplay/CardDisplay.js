@@ -3,7 +3,7 @@ import Card from '../Card/Card.js'
 import './CardDisplay.css'
 
 
-function CardDisplay({ artists, country, setTopArtists, setCurrentArtist }) {
+function CardDisplay({ artists, country, setTopArtists, setCurrentArtistID, setCurrentCountry }) {
 
   
 
@@ -15,7 +15,8 @@ function CardDisplay({ artists, country, setTopArtists, setCurrentArtist }) {
           <Card 
             artist={artist}
             setTopArtists={setTopArtists}
-            setCurrentArtist={setCurrentArtist}
+            setCurrentArtistID={setCurrentArtistID}
+            setCurrentCountry={setCurrentCountry}
           />
         )}
       </article>

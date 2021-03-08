@@ -13,7 +13,7 @@ function App() {
 
     const [artists, setTopArtists] = useState()
     const [currentCountry, setCurrentCountry] = useState()
-    const [currentArtistID, setCurrentArtist] = useState()
+    const [currentArtistID, setCurrentArtistID] = useState()
     const nationData = countryData
     // const inputRef = useRef()
 
@@ -25,12 +25,14 @@ function App() {
       setCurrentCountry(countryName)
       fetchTopArtists(isoCode)
       .then(data => setTopArtists(data))
+      .then(() => setCurrentArtistID())
   };
 
     const dropDownCountrySet = (countryName) => {
       setCurrentCountry(countryName)
       fetchTopArtists(getCode(countryName))
       .then(data => setTopArtists(data))
+      .then(() => setCurrentArtistID())
     }
   
       
@@ -64,9 +66,10 @@ function App() {
         country={currentCountry} 
         artists={artists}
         setTopArtists={setTopArtists}
-        setCurrentArtist={setCurrentArtist}
+        setCurrentArtistID={setCurrentArtistID}
+        setCurrentCountry={setCurrentCountry}
         />}
-        {currentArtistID && !artists && 
+        { !artists  && currentArtistID && !currentCountry &&
         <ArtistDisplay 
          artistID={currentArtistID}
         />}
