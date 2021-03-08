@@ -4,10 +4,19 @@
 html {
   height: 100%;
   background-color: #1AFF1A;
+  /* display: flex; */
 }
-
-.WorldMap {
-  width: 80%;
+.drop-down {
+  margin-bottom: 5vh;
+  width: 50vw;
+  height: 5vh;
+  background-color:#4B0092 ;
+  color: #1AFF1A;
+  font-size: 2em;
+  padding-left: 2vw;
+}
+.help-tag {
+  color: #4B0092;
 }
 
 .App-header {
@@ -20,3 +29,5 @@ html {
   font-size: calc(10px + 2vmin);
   color: white;
 }
+
+
