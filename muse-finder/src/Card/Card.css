@@ -1,9 +1,16 @@
 p {
-   
+   padding: .5em;
+
 }
 
 section {
   border: 1px solid black;
+  background-color: #4B0092;
   height: 5vh;
-  width: 40vw;;
+  width: 40vw;
+  padding: 1em;
+  margin: 1vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

@@ -18,10 +18,10 @@ function App() {
     const nationData = countryData
 
     var clickAction = function (event, countryName, isoCode, value, prefix, suffix) {
-      
+      setCurrentCountry(countryName)
       fetchTopArtists(isoCode)
       .then(data => setArtists(data))
-      .then(() => setCurrentCountry(countryName))
+      // .then(() => setCurrentCountry(countryName))
       .then(() => console.log(currentCountry))
 
   };
@@ -45,7 +45,7 @@ function App() {
        onClickFunction={clickAction} 
        />
         <p>
-          {artists && currentCountry && <CardDisplay  artists={artists}/>}
+          {artists && currentCountry && <CardDisplay  country={currentCountry}artists={artists}/>}
         </p>
     
     </div>
