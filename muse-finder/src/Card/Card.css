@@ -20,6 +20,7 @@ section {
   border-width: 4vh;
   border-style: solid;
   border-radius: 12vh;
+  block-size: fit-content
   /* border-image:  */
   /* linear-gradient(to top, #4B0092, #1AFF1A); */
   /* #a053df */
