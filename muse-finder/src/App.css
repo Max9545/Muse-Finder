@@ -17,6 +17,7 @@ html {
   font-family: "opendyslexic" !important;
   border-radius: 30px;
   padding-left: 2vw;
+  block-size: fit-contenst
 }
 .help-tag {
   color: black;

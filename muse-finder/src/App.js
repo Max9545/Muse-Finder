@@ -3,11 +3,13 @@ import Header from './Header/Header.js'
 import countryData from './countryData';
 import { fetchTopArtists } from './apiCalls'
 import { useEffect, useState, useRef } from 'react';
+import React, { Component } from 'react'
+import { Route } from 'react-router-dom'
 import CardDisplay from './CardDisplay/CardDisplay.js'
 import ArtistDisplay from './ArtistDisplay/ArtistDisplay';
-const { getCode, getName } = require('country-list')
-const WorldMap = require('react-svg-worldmap').WorldMap;
-const { CountryDropdown, RegionDropdown, CountryRegionData } = require('react-country-region-selector') 
+import { getCode, getName } from 'country-list'
+import { WorldMap } from 'react-svg-worldmap'
+import { CountryDropdown } from'react-country-region-selector'
 
 function App() {
 
@@ -48,6 +50,7 @@ function App() {
         className='drop-down'
         value={currentCountry}
         onChange={(val) => dropDownCountrySet(val)}
+        defaultOptionLabel='Country'
         // ref={inputRef}
        />
        <br/>
@@ -71,15 +74,31 @@ function App() {
           setCurrentArtistID={setCurrentArtistID}
           setCurrentCountry={setCurrentCountry}
         />}
-        { !topArtists  && !currentCountry && currentArtistID &&
-        <ArtistDisplay 
-          artistID={currentArtistID}
-          setFavoriteArtists={setFavoriteArtists}
-          favoriteArtists={favoriteArtists}
+        { !topArtists  && !currentCountry && currentArtistID && 
+        <Route
+          path='/:currentArtistID'
+          render={({ match }) => {
+          console.log(match)
+          return <ArtistDisplay 
+                    artistID={match.params.currentArtistID}
+                    setFavoriteArtists={setFavoriteArtists}
+                    favoriteArtists={favoriteArtists}
+        />
+          }}
         />}
+        
+        
       </p>
     </div>
   );
 }
 
 export default App;
+
+// { !topArtists  && !currentCountry && currentArtistID &&
+//   <ArtistDisplay 
+//     artistID={currentArtistID}
+//     setFavoriteArtists={setFavoriteArtists}
+//     favoriteArtists={favoriteArtists}
+//   />}
+
