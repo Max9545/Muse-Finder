@@ -2,7 +2,7 @@
 
 Muse Finder is for people traveling to another country who want to learn about the local music or have friends or family they want to bond with through one of the universal languages. 
 
-##Site Use Instructions
+## Site Use Instructions
 
 Use the drop menu or the map of our beautiful Earth to choose a country and see who the top 5 charting artists are according to [MusixMatch](https://www.musixmatch.com/).
 
