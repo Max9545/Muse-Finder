@@ -1,6 +1,6 @@
 # Muse-Finder
 
-Muse Finder is for people traveling to another country who want to learn about the local music or have friends or family they want to bond with through one of the universal languages. 
+Muse Finder is for people traveling to another country who want to learn about the local music or have friends or family they want to bond through one of the universal languages. 
 
 ## Site Use Instructions
 
@@ -10,6 +10,7 @@ Click on an artist to see some of their albums.
 
 Click Add to favorites at the bottom of the album list to add this artist to your favorites list.
 
+Bookmark the URL of your favorite artists to be able to come back to the page and see their album listings whnever you need.
 
 ## To start the Front End:
 ```
