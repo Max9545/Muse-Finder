@@ -1,7 +1,6 @@
-import {useEffect, useState} from 'react'
 import './Card.css'
-import { fetchSingleArtist, fetchSingleArtistAlbums } from '../apiCalls'
 import { Link } from 'react-router-dom'
+import PropTypes from 'prop-types'
 
 
 function Card({ artist, setCurrentArtistID, setTopArtists, setCurrentCountry }) {
@@ -23,3 +22,10 @@ function Card({ artist, setCurrentArtistID, setTopArtists, setCurrentCountry }) 
 }
 
 export default Card
+
+Card.propTypes = {
+  artist: PropTypes.string.isRequired,
+  setCurrentArtistID:PropTypes.func.isRequired, 
+  setTopArtists:PropTypes.func.isRequired,
+  setCurrentCountry: PropTypes.func.isRequired
+}

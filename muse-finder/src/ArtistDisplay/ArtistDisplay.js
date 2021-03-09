@@ -1,8 +1,11 @@
 import { useEffect, useState } from 'react'
 import './ArtistDisplay.css'
 import { fetchSingleArtist, fetchSingleArtistAlbums } from "../apiCalls"
+import PropTypes from 'prop-types';
 
-function ArtistDisplay ({artistID, setFavoriteArtists, favoriteArtists}) {
+
+
+function ArtistDisplay ({artistID, setFavoriteArtists }) {
   
   const [albums, setAlbums] = useState()
   const [artist, setArtist] = useState()
@@ -30,4 +33,11 @@ function ArtistDisplay ({artistID, setFavoriteArtists, favoriteArtists}) {
     )
 
 }
+
 export default ArtistDisplay
+
+ArtistDisplay.propTypes = {
+  artistID: PropTypes.string.isRequired,
+  setFavoriteArtists: PropTypes.func.isRequired,
+  // kim: PropTypes.arrayOf(object)
+}

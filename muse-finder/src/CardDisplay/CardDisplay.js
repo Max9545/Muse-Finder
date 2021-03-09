@@ -1,9 +1,11 @@
 import {useEffect, useState} from 'react'
 import Card from '../Card/Card.js'
 import './CardDisplay.css'
+import PropTypes, { object } from 'prop-types';
 
 
-function CardDisplay({ topArtists, country, setTopArtists, setCurrentArtistID, setCurrentCountry, setFavoriteArtists }) {
+
+function CardDisplay({ topArtists, country, setTopArtists, setCurrentArtistID, setCurrentCountry}) {
 
   
 
@@ -25,3 +27,11 @@ function CardDisplay({ topArtists, country, setTopArtists, setCurrentArtistID, s
 }
 
 export default CardDisplay
+
+Card.PropTypes = {
+  topArtists:  PropTypes.arrayOf(object),
+  country: PropTypes.string.isRequired,
+  setCurrentArtistID:PropTypes.func.isRequired, 
+  setTopArtists:PropTypes.func.isRequired,
+  setCurrentCountry: PropTypes.func.isRequired
+}
