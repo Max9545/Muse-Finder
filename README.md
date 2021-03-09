@@ -3,6 +3,12 @@
 Muse Finder is for people traveling to another country who want to learn about the local music or have friends or family they want to bond with through one of the universal languages. 
 
 
+Use the drop menu or the map of our beautiful Earth to choose a country and see who the top 5 artists are.
+
+Click on an artist to see some of their albums.
+
+Click Add to favorites at the bottom of the album list to add this artist to your favorites list.
+
 <table>
     <tr>
         <td> Max Bregman <a href="https://github.com/Max9545">GH</td>
