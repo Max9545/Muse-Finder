@@ -1,9 +1,11 @@
 import {useEffect, useState} from 'react'
 import Card from '../Card/Card.js'
 import './CardDisplay.css'
+import PropTypes, { object } from 'prop-types';
 
 
-function CardDisplay({ artists, country, setTopArtists, setCurrentArtistID, setCurrentCountry }) {
+
+function CardDisplay({ topArtists, country, setTopArtists, setCurrentArtistID, setCurrentCountry}) {
 
   
 
@@ -11,7 +13,7 @@ function CardDisplay({ artists, country, setTopArtists, setCurrentArtistID, setC
     <>
       <h2>Top 5 Artists from {country}</h2>
       <article>
-        {artists.message.body.artist_list.map(artist => 
+        {topArtists.message.body.artist_list.map(artist => 
           <Card 
             artist={artist}
             setTopArtists={setTopArtists}
@@ -25,3 +27,11 @@ function CardDisplay({ artists, country, setTopArtists, setCurrentArtistID, setC
 }
 
 export default CardDisplay
+
+Card.PropTypes = {
+  topArtists:  PropTypes.arrayOf(object),
+  country: PropTypes.string.isRequired,
+  setCurrentArtistID:PropTypes.func.isRequired, 
+  setTopArtists:PropTypes.func.isRequired,
+  setCurrentCountry: PropTypes.func.isRequired
+}

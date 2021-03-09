@@ -6,6 +6,7 @@ html {
   height: 100%;
   background: radial-gradient(circle, rgba(26,255,26,1) 26%, rgba(0,212,255,1) 55%, rgba(10,184,241,1) 60%, rgba(75,0,146,1) 95%);
 }
+
 .drop-down {
   margin-bottom: 5vh;
   width: 50vw;
@@ -17,9 +18,12 @@ html {
   font-family: "opendyslexic" !important;
   border-radius: 30px;
   padding-left: 2vw;
+  block-size: fit-contenst
 }
+
 .help-tag {
   color: black;
+  font-size: 1.2em;
 }
 
 .App-header {
