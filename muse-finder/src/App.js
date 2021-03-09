@@ -44,7 +44,7 @@ function App() {
   
     <div className="App">
        <Header/>
-       <p className='help-tag'>Select a country by typing or by using the drop down list or click on the map</p>
+       <label className='help-tag'>Select a country by typing or by using the drop down list or click on the map
        <CountryDropdown
         type='drop-down'
         className='drop-down'
@@ -53,6 +53,7 @@ function App() {
         defaultOptionLabel='Country'
         // ref={inputRef}
        />
+       </label>
        <br/>
        <WorldMap 
         color="#1AFF1A" 
@@ -86,8 +87,6 @@ function App() {
         />
           }}
         />}
-        
-        
       </p>
     </div>
   );
