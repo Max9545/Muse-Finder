@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import './ArtistDisplay.css'
 import { fetchSingleArtist, fetchSingleArtistAlbums } from "../apiCalls"
 
 function ArtistDisplay ({artistID, setFavoriteArtists, favoriteArtists}) {
@@ -23,8 +24,8 @@ function ArtistDisplay ({artistID, setFavoriteArtists, favoriteArtists}) {
    return(
      <>
       {albums && artist &&
-      <h3>{`${artist.message.body.artist.artist_name}`} Albums: <br></br>{albums.map(album => album.album.album_name)}</h3>}
-      <button onClick={() => setFavoriteArtists(favoriteArtists => [...favoriteArtists, artist])}>Favorite this Artist</button>
+        <h3>{`${artist.message.body.artist.artist_name}`} Albums: <br></br>{albums.map(album => album.album.album_name)}</h3>}
+        <button onClick={() => setFavoriteArtists(favoriteArtists => [...favoriteArtists, artist])}>Favorite This Artist</button>
      </>
     )
 

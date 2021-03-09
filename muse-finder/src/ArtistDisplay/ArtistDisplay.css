@@ -1,3 +1,11 @@
 h3 {
   color: black;
+  background-color: #4B0092;
+  color: #1AFF1A;
+}
+button {
+  background-color: #4B0092;
+  color: #1AFF1A;
+  height: 2vh;
+  width: 50vw;
 }

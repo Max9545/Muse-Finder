@@ -12,14 +12,12 @@ function Card({ artist, setCurrentArtistID, setTopArtists, setCurrentCountry }) 
   setCurrentCountry()
  }
 
-  return(
-
-    
+  return (
     <Link to={`/${artist.artist.artist_id}`} style={{ textDecoration: 'none'}}>
       <section id={artist.artist.artist}  onClick={() => getArtist(artist.artist.artist_id)} >
-      <p>{artist.artist.artist_name} </p> 
-  </section>
-  </Link>
+        <p>{artist.artist.artist_name} </p> 
+      </section>
+    </Link>
   )
 
 }
