@@ -11,7 +11,7 @@ function CardDisplay({ topArtists, country, setTopArtists, setCurrentArtistID, s
 
   return (  
     <>
-      <h2>Top 5 Artists from {country}</h2>
+      <h2>Top 5 Artists Right Now in {country}</h2>
       <article>
         {topArtists.message.body.artist_list.map(artist => 
           <Card 
