@@ -11,11 +11,12 @@ Click on an artist to see some of their albums.
 Click Add to favorites at the bottom of the album list to add this artist to your favorites list.
 
 
-To start the Front End:
+## To start the Front End:
 ```
 mkdir <your project name>
 cd <your project name>
 git clone https://github.com/Max9545/Muse-Finder.git
+cd Muse-Finder/muse-finder
 npm start
 ```
 
